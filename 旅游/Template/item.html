@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script>
+		ItemID=<?echo $ItemID?>;
+		cs=<?echo $cs?>;
+	</script>
+		<link href="/plugins/date/wui.css" rel="stylesheet" type="text/css" />
+		<link href="/Template/css/styles.css" rel="stylesheet" type="text/css" />
+<script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script><!-- 引入jquery -->
+<script src="/js/angular.min.js" type="text/javascript"></script>
+<script src="/plugins/date/wui-date.js" type="text/javascript"></script>
+<script src="/plugins/KindEditor/loader.js"></script>
+		<style type="text/css">
+.xnowrap{
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+			body {
+				background-color: #f4f4f4;
+				;
+			}
+
+			.details1 {
+				width: 1200px;
+				height: 660px;
+				margin: 0 auto;
+			}
+
+			.r1_2 {
+				position: relative;
+				height: 510px;
+				background-color: white;
+				margin-top: 20px;
+			}
+
+			.r1_2_left {
+				width: 500px;
+				height: 443.77px;
+				position: absolute;
+				top: 20px;
+				left: 69px;
+			}
+			#goods_num {
+				width: 40px;
+				height: 24px;
+				
+			}
+			#_small {
+				width: 402px;
+				height: 280px;
+				background-repeat: no-repeat;
+				background-size: 400px;
+				
+			}
+
+
+			.r1_2_right {
+				width: 630px;
+				height: 457.66px;
+				position: absolute;
+				right: 67px;
+				top: 20px;
+
+			}
+
+			.margintop20px {
+				margin-top: 20px;
+			}
+
+			.right_4_kc {
+				text-align: center;
+				line-height: 32px;
+				font-size: 14px;
+				margin-left: 10px;
+			}
+
+			#right_4acc {
+				display: inline-block;
+				width: 37px;
+				height: 21px;
+				border: 1px solid #dcdcdc;
+				text-align: center;
+				line-height: 21px;
+				font-size: 20px;
+				text-decoration: none;
+				float: left;
+			}
+
+			#right_4add {
+				display: inline-block;
+				width: 37px;
+				height: 21px;
+				border: 1px solid #dcdcdc;
+				text-align: center;
+				line-height: 21px;
+				font-size: 20px;
+				text-decoration: none;
+				float: left;
+			}
+
+			.pronumber {
+				color: #666;
+				float: left;
+				width: 49px;
+				height: 21px;
+				border: 1px solid #dcdcdc;
+				border-left: none;
+				border-right: none;
+				text-align: center;
+				line-height: 21px;
+			}
+
+			.rightkc {
+				vertical-align: middle;
+				display: inline-block;
+				outline: none;
+			}
+
+			.content {
+				background-color: aliceblue;
+			}
+
+			.content p {
+				padding-top: 20px;
+				padding-bottom: 40px;
+				padding-left: 140px;
+				width: 950px;
+				font-size: 14px;
+			}
+
+			.content h2 {
+				margin-left: 80px;
+			}
+
+			.content h3 {
+				margin-left: 160px;
+			}
+
+			.red{
+				color: red;
+				font-size: 25px;
+			}
+
+			.browse {
+				width: 300px;
+				border-bottom: 1px solid #EBEBEB;
+			}
+
+			.browse p {
+				color: #C2C2C2;
+				font-size: 12px;
+				margin-top: 8px;
+				margin-bottom: 15px;
+			}
+
+			.browse span {
+				color: #000000;
+			}
+
+			.goingout {
+				font-size: 13px;
+				margin-top: 7px;
+			}
+
+			.form-control {
+				display: inline-block;
+				height: 5px;
+				width: 150px;
+			}
+
+			.goingout_ {
+				font-size: 13px;
+				margin-top: 16px;
+				display: inline-block;
+			}
+
+			.cartype {
+				border-radius: 40px;
+				display: inline-block;
+				width: 160px;
+				height: 50px;
+				border: none;
+				background: linear-gradient(to right, #F23A3A, #FEA852);
+				margin-top: 20px;
+				color: white;
+				cursor: pointer;
+				background-image: url(../images/timg.jpg);
+				background-position: 0px 50px;
+				background-size: 164px 288px;
+			}
+
+			#win {
+				position: fixed;
+				top: 40%;
+				left: 40%;
+				width: 600px;
+				height: 400px;
+				background: #fff;
+				margin: -102px 0 0 -202px;
+				display: none;
+				z-index: 999;
+				border: 8px solid #1ABC9C;
+				border-radius:  0px 70px;
+			}
+
+			#close {
+				font-size: 12px;
+				position: absolute;
+				right: 55px;
+				top: 10px;
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				background-image: url(../images/close.jpg);
+				background-position: 300px 0px;
+				background-color: #004444;
+				background-size: 20px;
+			}
+
+			.title {
+				display: inline-block;
+				margin-top: 30px;
+				display: flex;
+			}
+
+			.car {
+				display: inline-block;
+				width: 80px;
+				background-image: url(../images/timg.jpg);
+				background-position: 0px 0px;
+				background-size: 97px 101px;
+				color: white;
+				border-radius: 5px;
+				border: none;
+				margin-left: 4px;
+			}
+			.carmove{
+				width: 50px;
+				position: absolute;
+			}
+			.car_top p{
+				position: absolute;
+				left: 80px;
+				top: 20px;
+			}
+            /* 弹出页面下边车型详情 */
+			.show {
+				height: 269px;
+				width: 600px;
+				display: none;
+				position: absolute;
+				top: 68px;
+				border: 1px solid #A1A1A1;
+			}
+            /* 立即预定按钮 */
+			.reserve {
+				display: inline-block;
+				margin-right: 22px;
+				border-radius: 10px;
+				width: 140px;
+				height: 45px;
+				border: none;
+				color: white;
+				background-image: url(../images/timg.jpg);
+				background-position: 0px 0px;
+				background-size: 139px 250px;
+			}
+			
+			
+            /* 加入购物车按钮 */
+			.shopcar {
+				display: inline-block;
+				border-radius: 10px;
+				width: 140px;
+				height: 45px;
+				border: none;
+				color: white;
+				background-image: url(../images/timg.jpg);
+				background-position: 0px 95px;
+				background-size: 139px 250px;
+			}
+			
+			
+           /* 以下small_前缀都是图片部分下面小图 */
+			.small2 {
+				width: 70px;
+				height: 70px;
+				display: inline-block;
+				background-size: 70px 70px;
+			}
+			.small2:hover{
+				cursor:pointer;
+			}
+			/* 下方小图外部大框 */
+			#left_ul {
+				position: absolute;
+				left: 0px;
+				list-style: none;
+				bottom: 65px;
+				height: 90px;
+			}
+			
+			#left_ul li {
+				display: inline-block;
+				width: 72px;
+				height: 72px;
+				border: 2px solid #dfdfdf;
+				margin-left: 5px;
+			}
+			#left_ul {
+				display: inline-block;
+				display: flex;
+				overflow: hidden;
+				width: 400px;
+				overflow: auto
+			}
+			
+			#left_ul::-webkit-scrollbar {
+				width: 16px;
+				height: 6px;
+				background-color: #F5F5F5;
+			}
+			
+			#left_ul::-webkit-scrollbar-thumb {
+				border-radius: 10px;
+				-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+				background-color: lightgray;
+			}
+			
+            /* 人数加减按钮 */
+			.rightkc {
+				position: absolute;
+				left: 60px;
+				top: 183px;
+			}
+           /* 详情头部中间最下方文字 */
+			.right_last {
+				margin-top: 15px;
+				font-size: 10px;
+				color: #A0A0A0;
+			}
+           /* 温馨提示大框 */
+			.hint {
+				position: absolute;
+				right: 25px;
+				top: 0px;
+				width: 300px;
+				height: 400px;
+				/* background-color: #008800; */
+				border-left: 1px solid #EBEBEB;
+			}
+
+			.hint_1 span {
+				font-weight: 600;
+				color: #D0D4F9;
+			}
+
+			.hint_1 p {
+				font-size: 12px;
+				margin-top: 10px;
+				width: 280px;
+				margin-left: 15px;
+			}
+
+			.hint_1 {
+				border-bottom: 1px solid #EBEBEB;
+			}
+
+			.hint_2 {
+				border-bottom: 1px solid #EBEBEB;
+			}
+
+			.hint_2 p {
+				font-size: 12px;
+				margin-top: 10px;
+				width: 300px;
+				margin-left: 15px;
+			}
+
+			.hint_3 p {
+				font-size: 13px;
+				margin-top: 15px;
+				width: 300px;
+				margin-left: 15px;
+			}
+        /* 页面中部行程图片 */
+			.StrokeFigure img {
+				width: 800px;
+				margin-left: 80px;
+				margin-bottom: 40px;
+			}
+
+			.StrokeFigure {
+				margin-left: 125px;
+			}
+         /* 用户选择车型右方显示 */
+			.cartype_p {
+				display: inline-block;
+				font-size: 12px;
+				margin-left: 10px;
+			}
+		</style>
+
+
+		<meta charset="utf-8">
+		<title></title>
+
+	</head>
+	<body style='display:inherit;'>
+
+
+		<div class="details_all">
+			<div class="details1">
+
+				<!-- 详情页上面图片一部分	 -->
+				<div class="r1_2">
+					<div class="r1_2_left">
+						<ul id="left_ul">
+							<li>
+								<div class='small2' style="background-image: url(../pic/0.jpg);"/>
+							</li>
+						</ul>
+
+						<!-- 详情页图片大图 -->
+						<div class="bid">
+							<div id="_small">
+							</div>
+						</div>
+					</div>
+
+
+					<!-- 详情页面中间说明部分 -->
+					<div class="r1_2_right" ng-app="appdate">
+						<h1>伦敦爱丁堡</h1>
+						<div class="browse">
+							<p>浏览城市 <span id="city_browsr">伦敦 爱丁堡</span></p>
+							<p>行程路线 <span id="itinerary">伦敦塔桥-议会大楼-爱丁堡城堡</span></p>
+						</div>
+						<div class='xnowrap'>
+							<p id="price" class='margintop20px red'>￥5370/人</p>
+							<p id="price2" class='margintop20px red'>元/人</p>
+						</div>
+						
+						<div class='xnowrap margintop20px'><p class="goingout">出行时间：</p>
+<div class="" lang="en">
+	<wui-date 
+		format="yyyy-mm-dd hh:mm:ss" 
+		placeholder="请选择或输入日期" 
+		id="date1" 
+		btns="{'ok':'确定','now':'此刻'}" 
+		ng-model="date1"
+		inputid="起始时间" 
+		inputcls="wf"
+	></wui-date>
+
+</div>
+						</div>
+						<div class='xnowrap margintop20px'>
+							<p class="goingout">出行人数：</p>
+							<div class=" xnowrap">
+								<button class='w50px' onclick='fungoods_num(0);'>-</button>
+								<input type="text" value="1" id="goods_num">
+								<button class='w50px' onclick='fungoods_num(1);'>+</button>
+							</div>
+						</div>
+						<div class='xnowrap margintop20px'>
+							<p class="goingout">总价:</p><p id='money' class='red'></p>
+						</div>
+						<!--p class="goingout_">套餐选择:</p>
+						<select name="test" class="form-control" id="qlc_zdz1" style="height:30px;outline:0;">
+							<option value="">套餐1：118 5-8人</option>
+							<option value="">套餐2：118 5-8人</option>
+							<option value="">套餐3：118 5-8人</option>
+							<option value="">套餐4：118 5-8人</option>
+							<option value="">套餐5：118 5-8人</option>
+						</select-->
+						<br />
+						<button class="cartype" id="carbtn" onclick='selectcar();'>车型选择</button>
+						<p class="cartype_p">您的选择是：<span id="cartype"></span></p>
+						<br />
+						<button class="reserve" onclick='buyitem(2003);'>立即预定</button><button class="shopcar" onclick='buyitem(2006);'>加入购物车</button>
+						<p class="right_last">认证商家 &nbsp;&nbsp;&nbsp; 24小时退款保障 &nbsp;&nbsp;&nbsp; 安全交易</p>
+
+						<div class="hint">
+
+							<!-- 温馨提示 固定数据-->
+							<p>温馨提示：</p>
+							<div class="hint_1">
+								<p><span>1/</span>如游客需要达人代订当地酒店、门票等费用，达人与游客明确预定流程、费用细则和预定风险；</p>
+								<p><span>2/</span>游客与达人达成共识后，代订费由游客提前支付平台，平台按照双方约定支付达人，达人提供预定凭证供游客备案</p>
+								<p><span>3/</span>如代订类服务产生退订，则按照第三方退订政策执行，达人需提供代订证明。若未实际支付，则代订费用全部退还</p>
+								<p><span>4/</span>由于不可抗力因素产生退订，请联系客服，协商处理</p>
+							</div>
+							<p>服务承诺：</p>
+							<div class="hint_2">
+								<p>出发前15天以上(不含15天)取消订单，可全额退款</p>
+								<p>出发前10天以上-15天内取消订单，扣除订单金额的30%</p>
+								<p>出发前5天以上-10天内取消订单，扣除订单金额的50%</p>
+								<p>出发前5天内取消订单，扣除订单金额的100%</p>
+							</div>
+							<div class="hint_3">
+								<p>节假日期间订单，退订扣款比例或有调整，请提前与达人沟通确认</p>
+							</div>
+						</div>
+					</div>
+
+
+
+				</div>
+
+
+				<!-- 详情页中间行程详情部分 -->
+				<div class="content">
+					<h2>行程详情：</h2>
+<div id='overlay'>
+</div>
+				</div>
+
+			</div>
+
+
+		</div>
+
+
+		<!-- 页面尾部 -->
+		<footer>
+		</footer>
+<script src="/js/main.js" type="text/javascript"></script>
+<script src="/js/main2.js" type="text/javascript"></script>
+<script type="text/javascript">
+function fungoods_num(val){
+	var obj=$('#goods_num')[0], max=Number(obj.max),now=0;
+	if(val){
+		now = Number(obj.value)+1;
+	}else{
+		now = Number(obj.value)-1;
+	}
+	if(now>0 && now<=max){
+		obj.value=now;
+		obj=$('#price')[0];
+		$('#money')[0].innerHTML = Number(obj.other)*now;
+	}
+}
+	app=angular.module('appdate',["wui.date"]);
+	tmp= new Array();
+	tmp['ID']=<?php echo $myrun?>
+</script>
+	</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<script>cs=<?echo $cs?></script>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" content="no-cache" />
+		<title>拼X旅行网页</title>
+		<link href="/plugins/date/wui.css" rel="stylesheet" type="text/css" />
+		<link href="/Template/css/styles.css" rel="stylesheet" type="text/css" />
+		<script src="/js/jquery-3.4.1.min.js"></script>
+		<script src="/js/angular.min.js" type="text/javascript"></script>
+		<script src="/plugins/date/wui-date.js" type="text/javascript"></script>
+
+		<script src="/plugins/KindEditor/loader.js"></script>
+		<script src="/js/main.js"></script>
+	</head>
+	<body class="centerY">
+		<div class="top">
+			<div class="logo">
+				<div id="myBox"><p>logo</p></div>
+			</div>
+			<div class='yc wf'>
+				<div id='title' class='xyc'>
+					<p>玩转旅途</p><a>驴友结伴更划算</a>
+				</div>
+				<div class='TopBottonSize'>
+					<div class='button ' onclick="AddItem(this);">
+						<p>确认发布</p>
+					</div>
+				</div>
+			</div>
+			<div class="top_right">
+				<div class="TopBottonSize">
+					<div class="button ">
+						<img src="images/u8.png">
+						<p>用户登录</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="yc w900px" id='createtable'>
+					<div class='wf xyc'><b class="sp" >标题:</b><input id='商品名称' type="text" placeholder='请输入标题' class='wf'/></div>
+				<div class='xc wf' ng-app="appdate">
+					<div class='wf xyc'><b class="sp" >起始时间:</b>
+<div class='wf'>
+	<wui-date 
+		format="yyyy-mm-dd hh:mm:ss" 
+		placeholder="请选择或输入日期" 
+		id="date1" 
+		btns="{'ok':'确定','now':'此刻'}" 
+		ng-model="date1"
+		inputid="起始时间" 
+		inputcls="wf"
+	></wui-date>
+</div>
+					</div>
+					<div class='wf xyc'><b class="sp" >终止时间:</b>
+<div class='wf'>
+	<wui-date
+		format="yyyy-mm-dd hh:mm:ss" 
+		placeholder="请选择或输入日期" 
+		id="date4" 
+		btns="{'ok':'确定','now':'此刻'}" 
+		ng-model="date4"
+		inputid="终止时间" 
+	></wui-date>
+</div>
+					</div>
+				</div>
+				<div class='xc wf'>
+					<div class='wf xyc'><b class="sp" >起始地址:</b><input id='起始地址' type="text" placeholder='请输入起始地址' onclick="selectaddr(this)"/></div>
+					<div class='wf xyc'><b class="sp" >终止地址:</b><input id='终止地址' type="text" placeholder='请输入终止地址' onclick="selectaddr(this)"/></div>
+				</div>
+					<div class='wf xyc'><b class="sp" >途经:</b><input id='途经' type="text" placeholder='请输入路途经过地点' onclick="selectaddr(this)"/></div>
+				
+					<div class='wf xyc'><b class="sp" >价格:</b><input id='价格' type="text" placeholder='请输入购买本服务所需要的金额'/></div>
+					<div class='wf xyc'><b class="sp" >人数:</b><input id='人数' type="text" placeholder='请输入单次预定最大人数'/></div>
+					<div class='wf xyc'><b class="sp" >计价单位:</b><input id='计价单位' type="text" placeholder='请输入计价单位'/></div>
+					<div class='wf xyc'><b class="sp" >预订须知:</b><input id='预订须知' type="text" placeholder='请选择预订须知' onclick="CreateItemSelect(this)"/></div>
+					<div class='wf xyc'><b class="sp" >服务承诺:</b><input id='服务承诺' type="text" placeholder='请输入服务承诺' onclick="CreateItemSelect(this)"/></div>
+					<div class='wf xyc'><b class="sp" >车型:</b><input id='车型' type="text" placeholder='请选择车型' onclick="CreateItemSelect(this)"/></div>
+		</div>
+
+		<div class="info2">
+			<textarea id='详情' name='content' ></textarea>
+		</div>
+		<div class="top footer">
+			<div class="logo">
+				<div id="myBox"><p>logo</p></div>
+			</div>
+			<div class="footer_right">
+					<a href="http://127.0.0.1:8848/wwwroot/aboutus/aboutus.html">
+						<p>关于我们</p>
+					</a>
+					<a href="http://127.0.0.1:8848/wwwroot/aboutus/greenhand.html">
+						<p>新手上路</p>
+					</a>
+					<a href="http://127.0.0.1:8848/wwwroot/aboutus/contact_us.html">
+						<p>联系我们</p>
+					</a>
+					<a href="http://127.0.0.1:8848/wwwroot/aboutus/help.html">
+						<p>使用帮助</p>
+					</a>
+					<a href="http://127.0.0.1:8848/wwwroot/aboutus/partner.html">
+						<p>合作伙伴</p>
+					</a>
+					<a href="http://192.168.124.101/tool/">
+						<p>旅行工具</p>
+					</a>
+			</div>
+		</div>
+		<div class="tst1">
+		</div>
+<!--script src="/plugins/selectAddress.js" type="text/javascript"></script-->
+<script>
+	var app = angular.module('appdate',["wui.date"]);
+</script>
+<script src="/js/main2.js"></script>
+<script src="/Template/js/CreateItem.js"></script>
+	</body>
+</html>

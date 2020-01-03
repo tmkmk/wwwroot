@@ -1,0 +1,145 @@
+@charset "UTF-8";
+/*
+   弹窗样式class --alert_Wrap 尽量不要修改样式名称，如若修改，JS文件中class也要做对应修改
+*/
+/*遮罩层*/
+.alertCont{
+	width: 640px;
+	height: 320px;
+}
+.alert_Wrap{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 99;
+    text-align: center
+}
+/*弹窗盒子*/
+.alert_Wrap .alertCont{
+    position: absolute;
+    border-radius: 5px;
+    text-align: center;
+
+    background: white;
+    top:35%;
+    left:1.1rem;
+    box-sizing: border-box;
+}
+/*加载弹窗中的弹窗盒子*/
+.alert_Wrap .alertLoad{
+    background: rgba(0,0,0,0);
+}
+/*弹窗标题*/
+.alert_Wrap .alertTitle{
+    font-size: 0.28rem;
+    color: black;
+    text-align: center;
+    padding: 0.2rem;
+    word-wrap: break-word;
+}
+/*弹窗文本*/
+.alert_Wrap .alertText{
+    font-size: 0.25rem;
+    color: black;
+    text-align: center;
+    padding-bottom: 0.15rem;
+    word-wrap: break-word;
+}
+/*弹窗文本域*/
+.alert_Wrap .alertArea{
+    font-size: 0.28rem;
+    color: black;
+    text-align: center;
+    padding-top: 0.1rem;
+    padding-bottom: 0.15rem;
+    word-wrap: break-word;
+}
+/*弹窗按钮*/
+.alert_Wrap .alertBtn{
+    width: 100%;
+    background: white;
+    text-align: center;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: auto;
+}
+.alert_Wrap .alertBtn input{
+    width: 50%;
+    float: left;
+    background: whitesmoke;
+    color: black;
+    cursor: pointer;
+    padding: 0.2rem;
+    font-size: 0.28rem;
+}
+/*取消按钮*/
+.alert_Wrap .alertBtn .cancel_btn{
+    border-right: 1px solid #d3cdcd;
+    border-top: 1px solid #d3cdcd;
+    border-bottom-left-radius: 5px;
+}
+/*确认按钮*/
+.alert_Wrap .alertBtn .alert_confirm_btn{
+    border-top: 1px solid #d3cdcd;
+    border-bottom-right-radius: 5px;
+    color: rgb(0, 174, 255);
+}
+.alert_Wrap .alertBtn .confirm_int{
+    width: 100%;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+/*加载图片*/
+.alert_Wrap .load_img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-left: -20px;
+    margin-top: -20px;
+}
+/*
+@media screen and (max-width:321px) {
+    html,
+    body {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .alert_Wrap .alertInput{
+        margin-left: 0.03rem;
+    }
+}
+@media screen and (min-width:321px) and (max-width:400px) {
+    html,
+    body {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .alert_Wrap .alertInput{
+        margin-left: 0.03rem;
+    }
+}
+@media screen and (min-width:400px) {
+    html,
+    body {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .alert_Wrap .alertInput{
+        margin-left: 0.04rem;
+    }
+}
+@media screen and (min-width:640px){
+    html,body {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .alert_Wrap .alertInput{
+        margin-left: 0.05rem;
+    }
+}
+*/

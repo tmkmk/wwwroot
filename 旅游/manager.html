@@ -1,0 +1,92 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>法网</title>
+  <link rel="stylesheet" href="skin/css/amazeui.min.css">
+  <link rel="stylesheet" type="text/css" href="skin/css/index.css">
+  <link rel="stylesheet" href="skin/css/app.css">
+</head>
+<body>
+
+<!-- header开始 -->
+<div class="fw-top">
+  <div class="am-container">
+    <div class="am-g">
+      <div class="am-u-sm-9">
+        <div class="fw-htxt">
+          <h1>法网后台管理系统</h1>
+        </div>
+      </div>
+      <div class="am-u-sm-3">
+        <div class="am-g">
+          <div class="am-u-sm-12 boot-img">
+              <img src="skin/img/001.jpg">
+          &emsp;<span>早上好,张先生</span>&emsp;<a href=""><i class="am-icon-bell-o am-icon-sm"></i></a>&emsp;<a href=""><i class="am-icon-power-off am-icon-sm"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- header结束 -->
+<!-- conter开始 -->
+<div class="am-container">
+  <div class="am-g">
+    <div class="am-u-sm-3 fw-left">
+        <ul>
+          <div onclick="BottonClick(this);" class="backwh"><li>用户管理</li></div>
+          <div onclick="BottonClick(this);" class="backwh"><li>服务机构管理</li></div>
+          <div onclick="BottonClick(this);" class="backwh"><li>信息管理</li></div>
+          <div onclick="BottonClick(this);" class="backwh"><li>普法微媒管理</li></div>
+          <div onclick="BottonClick(this);" class="backwh"><li>法网网群管理</li></div>
+          <div onclick="BottonClick(this);" class="backwh"><li>链接管理</li></div>
+          <div onclick="BottonClick(this);" class="backwh"><li>满意度调查</li></div>
+          <div onclick="BottonClick(this);" class="backwh"><li>自媒体一键发布</li></div>
+        </ul>
+    </div>
+    <div class="am-u-sm-9 fw-right" id="ybl">
+        
+    </div>
+	<div style="display:none;" id="createitem">
+	<input id='title' type='text' placeholder='请输入文章标题'/>
+	<input id='author' type='text' placeholder='请输入作者'/>
+	<textarea id='content' name='content11' style='width:700px;height:200px;visibility:hidden;'></textarea>
+	<button type='button' onclick='CreateItem(this,null);' class='am-btn am-btn-default am-btn-lg'>提交</button>
+	</div>
+  </div>
+</div>
+
+<!-- conter结束 -->
+<script src="skin/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="utf8-jsp/ueditor.config.js"></script>
+<!-- <script type="text/javascript" src="utf8-jsp/ueditor.all.min.js"></script>
+<script type="text/javascript" src="utf8-jsp/ueditor.parse.min.js"></script>
+<script type="text/javascript">
+  window.onload=function(){
+    UE.getEditor('editor');
+  }
+</script> -->
+<script type="text/javascript">
+  $('input[name="checkall"]').on("click",function(){
+  if($(this).is(':checked')){
+    $('input[name="checkbox"]').each(function(){
+      $(this).prop("checked",true);
+    });
+  }else{
+    $('input[name="checkbox"]').each(function(){
+      $(this).prop("checked",false);
+    });
+  }
+  });
+</script>
+<!--<![endif]-->
+<script src="skin/js/amazeui.min.js"></script>
+ <script src='plugins/KindEditor/loader.js'></script>
+ <script charset="utf-8" async="" src="manager.js"></script>
+</body>
+</html>

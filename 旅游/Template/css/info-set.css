@@ -1,0 +1,323 @@
+.contentent2 {
+
+}
+
+/*购物车头部*/
+
+.contentent2_hd {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	color: #3c3c3c;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.contentent2_hd .cartTop {
+	height: 50px;
+}
+
+.contentent2_hd .cartTop .list_id {
+	text-indent: 20px;
+	width: 50px;
+}
+
+.contentent2_hd .cartTop .list_img {
+	text-indent: 20px;
+	width: 100px;
+}
+
+.contentent2_hd .cartTop .list_con {
+	text-indent: 50px;
+	width: 170px;
+}
+
+
+.contentent2_hd .cartTop .list_adbeg {
+	width: 120px;
+	padding: 0;
+	text-indent: 25px;
+}
+
+.contentent2_hd .cartTop .list_adend {
+	width: 120px;
+	padding: 0;
+	text-indent: 25px;
+}
+
+.contentent2_hd .cartTop .list_price {
+	width: 70px;
+	padding: 0;
+	text-indent: 20px;
+}
+
+.contentent2_hd .cartTop .list_timbeg {
+	width: 160px;
+	padding: 0;
+	text-indent: 40px;
+}
+
+.contentent2_hd .cartTop .list_timend {
+	width: 170px;
+	padding: 0;
+	text-indent: 35px;
+}
+
+.contentent2_hd .cartTop .list_peomum {
+	text-indent: 30px;
+	padding: 0;
+	width: 70px;
+}
+
+.contentent2_hd .cartTop .list_cartyp {
+	text-indent: 30px;
+	padding: 0;
+	width: 70px;
+}
+
+.contentent2_hd .cartTop .list_oper {
+	text-indent: 30px;
+	padding: 0;
+	width: 70px;
+}
+
+.contentent2_hd .cartTop .list_addnew {
+	/* text-indent: 30px; */
+	margin-left: 30px;
+	font-size: 15px;
+	height: 30px;
+	padding: 0;
+	width: 70px;
+}
+
+.cartBox {
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.cartBox .shop_info {
+	position: relative;
+	width: 100%;
+	height: 38px;
+	background-color: #fff;
+	line-height: 38px;
+	vertical-align: baseline;
+}
+
+.cartBox .shop_info .shop_name {
+	float: left;
+}
+
+/*商品列表*/
+
+.cartBox .order_content a {
+	display: block;
+}
+
+.order_lists1 {
+    width: 1299px;
+	height: 130px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+/* .order_lists1:last-child{
+    border-bottom: none;
+}
+ */
+.order_lists1 li {
+	float: left;
+	height: 100%;
+}
+
+.order_lists1 .list_id {
+	width: 50px;
+	margin-left: 10px;
+}
+
+.order_lists1 .list_id .idpo {
+	margin-top: 20px;
+	line-height: 80px;
+	margin-left: 20px;
+}
+
+.order_lists1 .list_img {
+	width: 100px;
+}
+
+.order_lists1 .list_img img {
+	margin-top: 20px;
+	width: 80px;
+	height: 80px;
+	/* vertical-align: top; */
+}
+
+.order_lists1 .list_con {
+	width: 170px;
+}
+
+.order_lists1 .list_con .list_text {
+	/* background-color: #008000; */
+	text-align: center;
+	margin-top: 20px;
+	line-height: 80px;
+	width: 170px;
+	overflow: hidden;
+	/* float: right; */
+}
+
+.order_lists1 .list_con .list_text a {
+	color: #3c3c3c;
+}
+
+.order_lists1 .list_con .list_text a:hover {
+	color: #ff873e;
+	text-decoration: underline;
+}
+
+.order_lists1 .list_adbeg,.list_adend {
+	/* background-color: #008000; */
+	width: 120px;
+	box-sizing: border-box;
+	padding: 20px 0;
+	overflow: hidden;
+}
+
+.order_lists1 .list_adbeg p,
+.list_adend p {
+	/* background-color: #008000; */
+	/* color: #9c9c9c; */
+	line-height: 80px;
+	margin-left: 20px;
+
+}
+
+.order_lists1 .list_timbeg,
+.list_timend {
+	/* background-color: #008000; */
+	width: 160px;
+	box-sizing: border-box;
+	padding: 20px 0;
+	overflow: hidden;
+}
+
+.order_lists1 .list_timbeg p,
+.list_timend p {
+	/* background-color: #008000; */
+	/* color: #9c9c9c; */
+	line-height: 80px;
+	margin-left: 20px;
+
+}
+
+.order_lists1 .list_peomum {
+	/* background-color: #008000; */
+	width: 60px;
+	box-sizing: border-box;
+	padding: 20px 0;
+}
+
+.order_lists1 .list_cartyp {
+	/* background-color: #008000; */
+	width: 60px;
+	box-sizing: border-box;
+	padding: 20px 0;
+}
+
+.order_lists1 .list_cartyp p {
+	/* background-color: #008000; */
+	line-height: 80px;
+	margin-left: 10px;
+}
+
+.order_lists1 .list_oper {
+	/* background-color: #008000; */
+	width: 60px;
+	box-sizing: border-box;
+	padding: 20px 0;
+}
+
+.order_lists1 .list_oper .opbut {
+	/* background-color: #008000; */
+	line-height: 30px;
+	margin-left: 10px;
+	margin-top: 23px;
+}
+
+.order_lists1 .list_peomum p {
+	line-height: 80px;
+	margin-left: 10px;
+}
+
+.order_lists1 .list_price {
+	/* background-color: #31B0D5; */
+	width: 80px;
+}
+
+.order_lists1 .list_price .price {
+	text-align: center;
+	margin-top: 20px;
+	line-height: 80px;
+	font-family: Verdana, Tahoma, arial;
+	color: #3c3c3c;
+	font-weight: bold;
+}
+
+.order_lists1 .list_op {
+	text-align: center;
+	width: 150px;
+}
+
+.order_lists1 .list_op .del {
+	margin-top: 20px;
+	line-height: 80px;
+}
+
+.contentent3 {
+	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	text-align: center;
+	background-color: white;
+	width: 95%;
+	min-width: 1300px;
+	padding: 30px 0 70px;
+	border-radius: 5px;
+	/* box-shadow: 1px 1px 5px #888888; */
+	margin-left: 30px;
+}
+
+.eval-table,.deal-table,.shop-table,.thty-table,.limit-table,.cars-table,.warn-table{
+	width: 100%;
+	/* margin:50px auto; */
+	border: 1px solid #4FC3A1;
+	border-collapse: collapse;
+	border-radius: 5px;
+}
+
+/* .cars-table{
+	table-layout: fixed;
+}
+ */
+.deal-table td,th,.eval-table td,th,.shop-table td,th,.thty-table td,th,.limit-table td,th,.cars-table td,th,.warn-table td,th{
+	border: 1px solid #4FC3A1;
+}
+
+.deal-table th,.eval-table th,.shop-table th,.thty-table th,.limit-table th,.cars-table th,.warn-table th{
+	background-color: ghostwhite;
+	height: 40px;
+}
+
+.deal-table td,.eval-table td,.shop-table td,.thty-table td,.limit-table td,.cars-table td,.warn-table td{
+	height: 60px;
+	text-overflow: clip;
+}
+/* 
+.cars-table td{
+	word-break: break-word;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+} */
+.carinfo{
+	border: 0px;
+	resize: none;
+}
